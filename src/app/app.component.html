@@ -1,0 +1,30 @@
+
+<div class="w3-container w3-cyan">
+  <h2 class = "w3-center" >TODO APP</h2>
+</div>
+<div class="w3-card-4 w3-margin w3-padding w3-bar">
+<form class="w3-bar-item">
+    <!-- <label class = "w3-text-cyan">Start typing your task ... ^!!^</label> -->
+<input #inputdata class="w3-input w3-animate-input" style="width:30%" placeholder = "Write a TODO APP"type="text" >
+</form>
+<div style="width: 10%" class="w3-dropdown-hover w3-bar-item">
+    <button class="w3-button w3-text-cyan w3-padding">{{Category}} <i class="fa fa-angle-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="#" (click)="changeCategory('Personal')" class="w3-bar-item w3-button">Personal</a>
+      <a href="#" (click)="changeCategory('Family')"class="w3-bar-item w3-button">Family</a>
+      <a href="#" (click)="changeCategory('Vacational')"class="w3-bar-item w3-button">Vacational</a>
+    </div>
+</div>
+<div style="width: 10%" class="w3-dropdown-hover w3-bar-item">
+    <button class="w3-button w3-text-cyan w3-padding" >{{Priority}} <i class="fa fa-angle-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="#" (click)="changePriority('High')" class="w3-bar-item w3-button">High</a>
+      <a href="#" (click)="changePriority('Medium')" class="w3-bar-item w3-button">Medium</a>
+      <a href="#" (click)="changePriority('Low')" class="w3-bar-item w3-button">Low</a>
+    </div>
+</div>
+
+<div class="w3-bar-item"><button (click)="saveTodo(inputdata.value)"class="w3-button w3-cyan w3-round"> Add</button></div>
+</div>
+<app-tasklist>
+</app-tasklist>
